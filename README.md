@@ -7,7 +7,41 @@ Bring good mood with you!
 
 ## Chapter 1
 
-The list of useful links:
+### Table of contents
+
+1. VSCode, basic settings and plugins, .editorconfig
+
+2. Creating of NodeJS project
+    1. What is package.json file
+    2. Basic package.json configuration
+
+3. Webpack module bundler
+    1. Building of project by using of Webpack
+    2. Real-time debugging by using of Webpack Dev Server
+    3. Configuring of webpack.config.js
+    4. Building of index.html by using of html-webpack-plugin
+    5. Creating of production/static bundle
+
+4. Babel Javascript compiler
+    1. Installing Babel into project
+    2. Configuring of .babelrc file
+
+5. ESLint installation and configuration
+
+6. ES6. Most useful syntax sugar.
+    1. Constants
+    2. Arrow functions
+    3. Function default parameter values and ...rest parameters
+    4. Spread operator
+    5. Template Literals
+    6. Enhanced Object Properties
+    7. Destructuring Assignment
+    8. Array and Object iterators
+    9. Promise
+
+
+### References
+
 * [EditorConfig][.editorconfig]
 * [Specifics of npm's package.json handling][package.json]
 * [Working with package.json][Working with package.json]
@@ -24,12 +58,14 @@ The list of useful links:
 * [ESLint plugin with rules that help validate proper imports][eslint-plugin-import]
 * [React specific linting rules for ESLint][eslint-plugin-react]
 * [A wrapper for Babel's parser used for ESLint][babel-eslint]
+* [ES6 syntax sugar][ES6]
 
-## VSCode - a lightweight but powerful source code editor for React
+### VSCode - a lightweight but powerful source code editor not only for React
 
 Official site: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-Useful extensions:
+#### Useful extensions:
+
 * Babel JavaScript (by Michael McDermott)
 * Color Highlight (Sergii Naumov)
 * EditorConfig for VS Code (by EditorConfig)
@@ -77,3 +113,4 @@ My VSCode settings:
 [babel-eslint]: https://github.com/babel/babel-eslint
 [.editorconfig]: https://editorconfig.org/
 [VSCode]: https://code.visualstudio.com/
+[ES6]: http://es6-features.org
