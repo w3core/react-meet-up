@@ -26,7 +26,9 @@ Bring good mood with you!
     1. Installing Babel into project
     2. Configuring of .babelrc file
 
-5. ESLint installation and configuration
+5. ESLint - The pluggable linting utility for JavaScript and JSX
+    1. Installing of VSCode ESLint extension (by Dirk Baeumer)
+    2. Installing of ESLint extension into the project
 
 6. ES6. Most useful syntax sugar.
     1. Constants
