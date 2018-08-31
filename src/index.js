@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { rootId, title } from '../config';
+import { rootId } from '../config';
 
-import loop, { A, B } from './es6';
-console.log(loop, A, B);
+import Home from './Pages/Home';
 
-const App = ({ title }) => (<h1>{ title }</h1>);
+const App = () => (
+	<React.StrictMode>
+		<Home />
+	</React.StrictMode>
+);
 
 const root = document.getElementById(rootId);
 
-ReactDOM.render(<App title={ title } />, root);
+ReactDOM.render(<App />, root);
