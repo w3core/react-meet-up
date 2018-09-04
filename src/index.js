@@ -1,15 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { rootId } from '../config';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
+import { rootId } from '../config';
+import store from './store';
 import Home from './Pages/Home';
 
-const App = () => (
+const reduxDevTools =
+	typeof window !== 'undefined' &&
+	window.__REDUX_DEVTOOLS_EXTENSION__ &&
+	window.__REDUX_DEVTOOLS_EXTENSION__();
+const $store = store(reduxDevTools);
+
+render(
 	<React.StrictMode>
-		<Home />
-	</React.StrictMode>
+		<Provider store={ $store }>
+			<Home />
+		</Provider>
+	</React.StrictMode>,
+	document.getElementById(rootId)
 );
-
-const root = document.getElementById(rootId);
-
-ReactDOM.render(<App />, root);
