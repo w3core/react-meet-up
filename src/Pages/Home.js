@@ -9,15 +9,16 @@ import { goodsActions } from '../ducks';
 import Button from '../Elements/Button';
 
 class Home extends Component {
-
 	static propTypes = {
 		fetchGoods: PropTypes.func
 	}
 
 	render() {
+		const { fetchGoods } = this.props;
+
 		return (
 			<Fragment>
-				<Button onClick={ this.props.fetchGoods }>Fetch Goods</Button>
+				<Button onClick={fetchGoods}>Fetch Goods</Button>
 				<pre>{ JSON.stringify(this.props, null, '\t') }</pre>
 			</Fragment>
 		);
@@ -25,23 +26,22 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-	name: state.getIn([ 'user', 'name' ], 'Anonymous'),
-	age: state.getIn([ 'user', 'age' ], '38'),
-	goods: state.getIn([ 'goods' ])
+	name: state.getIn(['user', 'name'], 'Anonymous'),
+	age: state.getIn(['user', 'age'], '38'),
+	goods: state.getIn(['goods'])
 });
 
-const mapDispatchToProps = dispatch =>
-	bindActionCreators(
-		{
-			fetchGoods: goodsActions.fetchGoods
-		},
+const mapDispatchToProps = dispatch => bindActionCreators(
+	{
+		fetchGoods: goodsActions.fetchGoods
+	},
 
-		dispatch
-	);
+	dispatch,
+);
 
 const enhance = compose(
 	setDisplayName('Home'),
-	connect(mapStateToProps, mapDispatchToProps)
+	connect(mapStateToProps, mapDispatchToProps),
 );
 
 export default enhance(Home);

@@ -9,7 +9,7 @@ export const fetchGoods = () => ({
 	[RSAA]: {
 		endpoint: 'https://api.myjson.com/bins/f7xkc',
 		method: 'GET',
-		types: [ GOODS_REQUEST, GOODS_SUCCESS, GOODS_FAILURE ]
+		types: [GOODS_REQUEST, GOODS_SUCCESS, GOODS_FAILURE]
 	}
 });
 
