@@ -6,7 +6,7 @@ const config = require('./config');
 
 module.exports = {
 	resolve: {
-		modules: [ './src', 'node_modules' ],
+		modules: ['./src', 'node_modules'],
 		plugins: [
 			new DirectoryNamedWebpackPlugin(true)
 		]
@@ -16,7 +16,8 @@ module.exports = {
 	},
 	devtool: 'inline-source-map',
 	devServer: {
-		contentBase: './dist'
+		contentBase: './dist',
+		port: 8888
 	},
 	module: {
 		rules: [
@@ -36,11 +37,11 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin([ 'dist' ]),
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin(config)
 	],
 	output: {
 		filename: '[name].bundle.js',
-		path: `${ __dirname }/dist`
+		path: `${__dirname}/dist`
 	}
 };

@@ -3,5 +3,5 @@ module.exports = {
 	title: 'React Meeet Up',
 	icon: 'data:image/x-icon;base64,==',
 	browserColor: '#3b3b3b',
-	template: `${ __dirname }/src/index.ejs`
+	template: `${__dirname}/src/index.ejs`
 };
