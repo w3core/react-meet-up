@@ -1,50 +1,56 @@
 {
   "name": "react-meet-up",
-  "version": "1.0.0",
-  "description": "",
+  "description": "Deep dive in ReactJS",
   "keywords": [
     "javascript",
     "es6"
   ],
-  "author": "OnSEO",
+  "author": "OnSeo",
+  "version": "1.0.0",
   "license": "MIT",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/onseopublic/react-meet-up"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "precommit": "lint-staged"
   },
   "dependencies": {
+    "babel-runtime": "6.26.0",
     "prop-types": "15.6.2",
-    "react": "16.4.2",
-    "react-dom": "16.4.2"
+    "react": "16.5.0",
+    "react-dom": "16.5.0"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
-    "babel-eslint": "9.0.0",
     "babel-loader": "7.1.5",
-    "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-plugin-transform-export-extensions": "6.22.0",
-    "babel-plugin-transform-object-assign": "6.22.0",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-airbnb": "2.6.0",
     "clean-webpack-plugin": "0.1.19",
-    "css-loader": "1.0.0",
     "directory-named-webpack-plugin": "4.0.0",
-    "eslint": "5.3.0",
+    "eslint": "5.5.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.0",
+    "eslint-plugin-react": "7.11.1",
+    "file-loader": "2.0.0",
     "html-webpack-plugin": "3.2.0",
-    "node-sass": "4.9.3",
-    "sass-loader": "7.1.0",
-    "style-loader": "0.23.0",
-    "webpack": "4.16.5",
+    "lint-staged": "7.2.2",
+    "prettier-eslint-cli": "4.7.1",
+    "webpack": "4.18.0",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.5"
+    "webpack-dev-server": "3.1.8",
+    "webpack-manifest-plugin": "2.0.4",
+    "yargs": "^12.0.2"
+  },
+  "lint-staged": {
+    "*.{js,json,jsx}": [
+      "prettier-eslint --print-width 120 --write",
+      "git add"
+    ]
   }
 }

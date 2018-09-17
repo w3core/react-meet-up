@@ -1,9 +1,19 @@
 {
-    "presets": [ "airbnb" ],
-    "plugins": [
-        "transform-class-properties",
-        "transform-export-extensions",
-        "transform-object-assign",
-        "transform-object-rest-spread"
+  "presets": [
+    [
+      "airbnb",
+      {
+        "removePropTypes": true
+      }
+    ],
+    [
+      "env",
+      {
+        "loose": true,
+        "uglify": true,
+        "modules": false
+      }
     ]
+  ],
+  "plugins": ["transform-runtime"]
 }

@@ -1,118 +1,318 @@
-# Dive deep into React!
-The React Meet Up is a public event to dive deeply in modern and accurate approaches in React development.
-All topics are technical and are focused on professional development and solving of issues in real-world React applications.
-We will start from basics, so it is also great opportunity to start with us!
-All you need to be ready for the React Meet Up is light knowledge in JavaScript and middle knowledge in CSS3/HTML5.
-Bring good mood with you!
+# Deep dive into React JS
 
-## Chapter 1
+Training projects for ReactJS
 
-### Table of contents
+## Chapter-1
 
-1. VSCode, basic settings and plugins, .editorconfig
+How to setup JS project in 2018
 
-2. Creating of NodeJS project
-    1. What is package.json file
-    2. Basic package.json configuration
+### VSCode
 
-3. Webpack module bundler
-    1. Building of project by using of Webpack
-    2. Real-time debugging by using of Webpack Dev Server
-    3. Configuring of webpack.config.js
-    4. Building of index.html by using of html-webpack-plugin
-    5. Creating of production/static bundle
+Get it here: https://code.visualstudio.com
 
-4. Babel Javascript compiler
-    1. Installing Babel into project
-    2. Configuring of .babelrc file
+#### Recommended extensions
 
-5. ESLint - The pluggable linting utility for JavaScript and JSX
-    1. Installing of VSCode ESLint extension (by Dirk Baeumer)
-    2. Installing of ESLint extension into the project
+To install an extension, run
+`code --install-extension <extension-id>`
 
-6. ES6. Most useful syntax sugar.
-    1. Constants
-    2. Arrow functions
-    3. Function default parameter values and ...rest parameters
-    4. Spread operator
-    5. Template Literals
-    6. Enhanced Object Properties
-    7. Destructuring Assignment
-    8. Array and Object iterators
-    9. Promise
+**Extensions**
 
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+chrmarti.regex
+coderfee.open-html-in-browser
+dbaeumer.vscode-eslint
+eamodio.gitlens
+eg2.vscode-npm-script
+esbenp.prettier-vscode
+fknop.vscode-npm
+formulahendry.auto-close-tag
+formulahendry.auto-complete-tag
+formulahendry.auto-rename-tag
+jasonnutter.search-node-modules
+jpoissonnier.vscode-styled-components
+jtlowe.vscode-icon-theme
+lamartire.git-indicators
+ms-vscode.PowerShell
+msjsdiag.debugger-for-chrome
+PeterJausovec.vscode-docker
+shd101wyy.markdown-preview-enhanced
+spywhere.guides
+streetsidesoftware.code-spell-checker
+waderyan.nodejs-extension-pack
+xabikos.JavaScriptSnippets
 
-### References
+#### Recommended User Settings
 
-* [EditorConfig][.editorconfig]
-* [Specifics of npm's package.json handling][package.json]
-* [Working with package.json][Working with package.json]
-* [Webpack module bundler][Webpack]
-* [Webpack Dev Server][webpack-dev-server]
-* [HTML Webpack Plugin][html-webpack-plugin]
-* [Clean Webpack Plugin][clean-webpack-plugin]
-* [Babel][Babel]
-* [Webpack plugin for Babel][babel-loader]
-* Common Babel presets used in project:
-    * [babel-preset-env][babel-preset-env]
-    * [babel-preset-react][babel-preset-react]
-* [ESLint - The pluggable linting utility for JavaScript and JSX][ESLint]
-* [ESLint plugin with rules that help validate proper imports][eslint-plugin-import]
-* [React specific linting rules for ESLint][eslint-plugin-react]
-* [A wrapper for Babel's parser used for ESLint][babel-eslint]
-* [ES6 syntax sugar][ES6]
+Copy/Pase the below into the _File -> Preferences -> Settings -> USER SETTINGS_
 
-### VSCode - a lightweight but powerful source code editor not only for React
-
-Official site: [https://code.visualstudio.com/](https://code.visualstudio.com/)
-
-#### Useful extensions:
-
-* Babel JavaScript (by Michael McDermott)
-* Color Highlight (Sergii Naumov)
-* EditorConfig for VS Code (by EditorConfig)
-* ESLint (by Dirk Baeumer)
-
-My VSCode settings:
-```json
+```javascript
 {
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "files.trimTrailingWhitespace": true,
-    "editor.renderWhitespace": "all",
-    "workbench.startupEditor": "none",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "eslint.autoFixOnSave": true,
-    "files.eol": "\n",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/node_modules": true,
-        "**/package-lock.json": true
-    },
-    "javascript.validate.enable": false,
-    "git.enableSmartCommit": true
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "default",
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "editor.renderWhitespace": "all",
+  "workbench.iconTheme": "vscode-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorWhitespace.foreground": "#488"
+  },
+  "guides.normal.width": 1,
+  "guides.normal.color.dark": "rgba(180, 180, 180, 0.75)",
+  "guides.normal.style": "dotted",
+  "guides.normal.hideOnSelection": false,
+  "guides.active.width": 1,
+  "guides.active.color.dark": "rgba(255, 255, 0, 0.75)",
+  "guides.active.style": "solid",
+  "guides.active.hideOnSelection": false,
+  "guides.stack.style": "dotted",
+  "guides.stack.hideOnSelection": false,
+  "guides.stack.color.dark": "rgba(180, 180, 180, 0.75)",
+  "guides.sendUsagesAndStats": false,
+  "guides.active.gutter": true,
+  "editor.rulers": [120],
+  "editor.renderIndentGuides": false,
+  "terminal.integrated.scrollback": 9999,
+  "npm-intellisense.importLinebreak": ";\n",
+  "css.validate": false,
+  "scss.validate": false,
+  "window.zoomLevel": 0,
+  "cSpell.userWords": [
+    "HOCs",
+    "Transpiler",
+    "Truthy",
+    "devtool",
+    "jsnext",
+    "lifecycle",
+    "nbsp",
+    "polyfill",
+    "precache",
+    "precommit",
+    "prepush",
+    "reselect",
+    "rgba",
+    "stylelint",
+    "wdio",
+    "webdriverio"
+  ],
+  "terminal.integrated.rightClickBehavior": "selectWord",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.settings.mode": "advanced",
+  "editor.formatOnSave": true,
+  "typescript.format.enable": false,
+  "typescript.validate.enable": false,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true
 }
 ```
 
+### Install
 
-[package.json]: https://docs.npmjs.com/files/package.json
-[Working with package.json]: https://docs.npmjs.com/getting-started/using-a-package.json
-[Webpack]: https://webpack.js.org/concepts/
-[webpack-dev-server]: https://webpack.js.org/guides/development/#using-webpack-dev-server
-[html-webpack-plugin]: https://github.com/jantimon/html-webpack-plugin
-[clean-webpack-plugin]: https://github.com/johnagan/clean-webpack-plugin
-[Babel]: http://babeljs.io/docs/en
-[babel-loader]: https://github.com/babel/babel-loader
-[babel-preset-env]: https://babeljs.io/docs/en/babel-preset-env/
-[babel-preset-react]: https://babeljs.io/docs/en/babel-preset-react
-[ESLint]: https://eslint.org/
-[eslint-plugin-import]: https://github.com/benmosher/eslint-plugin-import
-[eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
-[babel-eslint]: https://github.com/babel/babel-eslint
-[.editorconfig]: https://editorconfig.org/
-[VSCode]: https://code.visualstudio.com/
-[ES6]: http://es6-features.org
+`npm i`
+
+### Run
+
+`npm run start`
+
+The application will be available at: `http://localhost:1000`
+
+### Build
+
+`npm run build`
+
+Built application will be available in the root `dist` folder.
+
+### Setup Details
+
+#### package.json
+
+```javascript
+.........
+"scripts": {
+    // Builds the application into the 'dist' folder in production mode.
+    // Generates minified index.js, minified index.html.
+    "build": "webpack --mode production",
+
+    // Launches the application on localhost, tracks changes in source files
+    // and reloads browser when source files are changing
+    "start": "webpack-dev-server --mode development",
+
+    // 'precommit' script executes when 'git commit' runs.
+    // It runs the 'lint-staged' NPM package (see its settings at the end of this file).
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    // Replaces inlined (copy/pasted) babel helpers with imported references.
+    // Such approach reduces size of of transpiled code.
+    // See https://babeljs.io/docs/en/babel-runtime.
+    "babel-runtime": "6.26.0",
+
+    // Validates properties passed into React components. See 'propTypes' in the App.jsx
+    "prop-types": "15.6.2",
+
+    // ReactJS. That's it!
+    "react": "16.5.0",
+
+    // Helpers to render React components into the DOM.
+    "react-dom": "16.5.0"
+  },
+  "devDependencies": {
+    // Babel itself.
+    "babel-core": "6.26.3",
+
+    // This package allows transpiling JavaScript files using Babel and Webpack.
+    // See https://github.com/babel/babel-loader.
+    "babel-loader": "7.1.5",
+
+    // A plugin that enables the re-use of Babel's injected helper code to save on code size.
+    // See https://babeljs.io/docs/en/babel-plugin-transform-runtime.
+    "babel-plugin-transform-runtime": "6.23.0",
+
+    // This preset configures Babel with transpilation settings and EcmaScript features used by Airbnb.
+    "babel-preset-airbnb": "2.6.0",
+
+    // Cleans the 'dist' folder.
+    // It is useful when some files are deleted and they should not be present in production anymore,
+    // especially assets, configs etc., which might break or compromise the application.
+    // See https://webpack.js.org/guides/output-management/#cleaning-up-the-dist-folder.
+    "clean-webpack-plugin": "0.1.19",
+
+    // By default, when 'import' statement is used against a folder, node searches an index.js file inside.
+    // this plugin allows to search <folder-name>.js files as well, reducing useless index.js files.
+    // See https://github.com/shaketbaby/directory-named-webpack-plugin.
+    "directory-named-webpack-plugin": "4.0.0",
+
+    // An NPM module to verify source files follow coding conventions.
+    // This NPM module is used by VS Code to provide intellisense in the code editor.
+    // See https://eslint.org.
+    "eslint": "5.5.0",
+
+    // Configuration with Airbnb's coding conventions.
+    // See https://github.com/airbnb/javascript.
+    "eslint-config-airbnb": "17.1.0",
+
+    // Configures eslint to use webpack.config.js to resolve modules in 'import' statements.
+    // See .eslintrc
+    "eslint-import-resolver-webpack": "0.10.1",
+
+    // Required by the 'eslint-config-airbnb'.
+    "eslint-plugin-import": "2.14.0",
+
+    // Required by the 'eslint-config-airbnb'.
+    "eslint-plugin-jsx-a11y": "6.1.1",
+
+    // Required by the 'eslint-config-airbnb'.
+    "eslint-plugin-react": "7.11.1",
+
+    // This plugin resolves asset files, like images, fonts, etc.
+    // See https://webpack.js.org/loaders/file-loader.
+    "file-loader": "2.0.0",
+
+    // This plugin is used to generate index.html from index.ejs template. See the index.ejs.
+    // See https://webpack.js.org/plugins/html-webpack-plugin.
+    "html-webpack-plugin": "3.2.0",
+
+    // This module grabs staged files (added via 'git add' command), filters them by specified patterns below
+    // and passes them to the configured commands.
+    "lint-staged": "7.2.2",
+
+    // CLI to run prettier-eslint. This module re-formats and re-writes source files (spacing, paddings etc.)
+    // and then runs eslint to verify source files against coding rules.
+    "prettier-eslint-cli": "4.7.1",
+
+    // The webpack bundler. See https://webpack.js.org/concepts.
+    "webpack": "4.18.0",
+
+    // CLI for webpack commands 'webpack ...'. See the 'scripts' section above for example.
+    "webpack-cli": "3.1.0",
+
+    // This module runs application on localhost, tracks changes in source files and reloads browser.
+    // See https://webpack.js.org/guides/development/#using-webpack-dev-server.
+    "webpack-dev-server": "3.1.8",
+
+    // Generates assets manifest. See https://webpack.js.org/guides/output-management/#the-manifest.
+    "webpack-manifest-plugin": "2.0.4",
+
+    // Helpers to extract arguments (aka. 'argv') passed into scripts. See the webpack.config.js
+    "yargs": "^12.0.2"
+  },
+
+  // This is configuration of the 'lint-staged' NPM module.
+  "lint-staged": {
+    "*.{js,json,jsx}": [
+
+      // Runs 'prettier-eslint'.
+      "prettier-eslint --print-width 120 --write",
+
+      // Source files after re-formatting become un-staged, so they should be staged again.
+      "git add"
+    ]
+  }
+```
+
+#### .editorconfig
+
+Editor config is a well-known cross-IDE configuration to align developers using different IDEs with indentation, spacing, line endings (windows/Unix styles) etc.
+
+See https://editorconfig.org.
+
+#### .eslintrc
+
+Configuration file for Eslint to validate coding conventions, in our case Airbnb's guidelines.
+
+#### .babelrc
+
+Configuration for Babel to transpile ES6 code into ES5.
+
+```javascript
+{
+  "presets": [
+    [
+      // Use Airbnb preset.
+      "airbnb",
+      {
+        // Remove prop-types in production build.
+        "removePropTypes": true
+      }
+    ],
+    [
+      "env",
+      {
+        // A normal mode follows the semantics of ECMAScript 6 as closely as possible.
+        // A loose mode produces simpler ES5 code.
+        "loose": true,
+
+        // Set it to true if you use UglifyJS (it is used by Webpack in our case).
+        // Ensures that the output syntax is supported by uglify.js to minimize our bundles.
+        "uglify": true,
+
+        // Ensures that import statements are left as is (opposed to transpiling them to require).
+        // It gives Webpack the ability to statically analyze code to produce more efficient bundles.
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": ["transform-runtime"]
+}
+```
+
+#### launch.json
+
+VS Code configuration to launch applications.
+Current configuration provides ability to debug application in VS Code with breakpoints etc.
+
+#### webpack.config.js
+
+See the `webpack.config.js` with rich comments.
+
+### ES6 Features
+
+See http://es6-features.org
