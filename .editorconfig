@@ -1,25 +1,12 @@
-# EditorConfig is awesome: http://EditorConfig.org
-
-# top-most EditorConfig file
+# airbnb config
 root = true
 
-# Unix-style newlines with a newline ending every file
 [*]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
-
-# JavaScript Tab indentation
-[*.{js,css}]
-indent_style = tab
-indent_size = 4
-
-# package.json
-[package.json]
 indent_style = space
 indent_size = 2
-
-[*.{sh,markdown,md}]
-indent_style = space
-indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+# editorconfig-tools is unable to ignore longs strings or urls
+max_line_length = null
