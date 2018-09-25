@@ -7,19 +7,8 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 1: Initial
+### Step 2: Action and reducer
 
-#### Start of our journey 🛣️
-
-Right now we'll begin our long, yet fast road to Redux, at your command!
-
-At this point this repo includes following dependencies:
-
- - `immutable`
- - `react-redux`
- - `redux`
- - `redux-api-middleware`
- - `redux-immutable`
-
-So feel free to run `npm install` if you have checked out this branch for the first time.
-Checkout any of the commits listed below to navigate through this tutorial steps.
+Let's create simple simple counter example.
+It'll have default value of 0. And it will be possible to increment and decrment it's value.
+So we'll need to write two simple actions and a reducer to handle them.
