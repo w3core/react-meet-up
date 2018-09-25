@@ -7,11 +7,8 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 2: Component and Store
+### Step 3: Creating action creators and triggering them
 
-Let's setup our store and show counter value inside `Counter` component, which we'll create as well.
-For now our store will only consist of `counterReducer` mapped as `counter`.
+Let's finally make those buttons usable! We'll need to prepare action creators for them. After that, we'll have to create `mapDispatchToProps` method which describes and returns our strategy on mapping actions to a component. Having that done we'll pass our `increment()` and `decrement()` action creators to `Counter` component which use them as eventHandlers for respective buttons.
 
-The next step is to "wire" our store to pass down data to `Counter` component. We need to user `react-redux`'s `connect()` method and supply it with our "strategy" on store mapping. Since counter value is stored with the exact same name let's map it into the Home page as a `value` variable, and pass it down to the `Counter` component.
-
-And thats it - we can see our `Counter` component with default value of 0 and "+"/"-" buttons below, but can those buttons change its value? You'll get to it in the next step.
+And that's it! Now you can play with counter value!
