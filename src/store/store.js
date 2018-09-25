@@ -6,4 +6,9 @@ const rootReducer = combineReducers({
 	counter: counterReducer
 });
 
-export default createStore(rootReducer);
+const initialState = {
+	counter: 42
+};
+
+export default createStore(rootReducer, initialState,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

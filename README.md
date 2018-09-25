@@ -7,8 +7,10 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 3: Creating action creators and triggering them
+### Step 4: Default store state and Redux DevTools
 
-Let's finally make those buttons usable! We'll need to prepare action creators for them. After that, we'll have to create `mapDispatchToProps` method which describes and returns our strategy on mapping actions to a component. Having that done we'll pass our `increment()` and `decrement()` action creators to `Counter` component which use them as eventHandlers for respective buttons.
+It could be handy to define the store's default state and Redux allows us to implement that - we need to pass it as a second argument to the `createStore()` method.
 
-And that's it! Now you can play with counter value!
+Alongside, it also could be handy to have some debug tool to look at our state changes. [Redux DevTool](https://github.com/zalmoxisus/redux-devtools-extension) extension is exactly there to help us. Since you've installed it you need to add it's middleware to our store passing it as a third argument to the `createStore()` method.
+
+And that's it - you may open your browser DevTool, switch to "Redux" tab and browse your store and navigate through the lifetime of your app!
