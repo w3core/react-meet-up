@@ -5,18 +5,19 @@ import PropTypes from 'prop-types';
 
 import Counter from '../components/Counter';
 
-import { counterIncrement, counterDecrement } from '../actions/counter';
+import { counterIncrement, counterDecrement, counterChangeBy } from '../actions/counter';
 
-const Home = ({ value, increment, decrement }) => (
+const Home = ({ value, increment, decrement, changeBy }) => (
 	<div>
-		<Counter value={value} increment={increment} decrement={decrement} />
+		<Counter value={value} increment={increment} decrement={decrement} changeBy={changeBy} />
 	</div>
 );
 
 Home.propTypes = {
 	value: PropTypes.number,
 	increment: PropTypes.func,
-	decrement: PropTypes.func
+	decrement: PropTypes.func,
+	changeBy: PropTypes.func
 };
 
 const mapStateToProps = state => ({
@@ -25,7 +26,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
 	increment: counterIncrement,
-	decrement: counterDecrement
+	decrement: counterDecrement,
+	changeBy: counterChangeBy
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -7,10 +7,8 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 4: Default store state and Redux DevTools
+### Step 4: Arguments in action creators
 
-It could be handy to define the store's default state and Redux allows us to implement that - we need to pass it as a second argument to the `createStore()` method.
+Almost everytime action creator depends on some data passed to it as an argument. To demonstrate this let's implement a feature of incrementing and decrementing our counter by some specified value.
 
-Alongside, it also could be handy to have some debug tool to look at our state changes. [Redux DevTool](https://github.com/zalmoxisus/redux-devtools-extension) extension is exactly there to help us. Since you've installed it you need to add it's middleware to our store passing it as a third argument to the `createStore()` method.
-
-And that's it - you may open your browser DevTool, switch to "Redux" tab and browse your store and navigate through the lifetime of your app!
+And after this, we'll start with something more interesting than a simple counter.
