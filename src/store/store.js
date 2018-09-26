@@ -1,13 +1,16 @@
 import { createStore, combineReducers } from 'redux';
 
-import todoReducer from '../reducers/todos';
+import todosReducer from '../reducers/todos';
+import visibilityFilterReducer from '../reducers/visibilityFilter';
 
 const rootReducer = combineReducers({
-	todos: todoReducer
+	todos: todosReducer,
+	visibilityFilter: visibilityFilterReducer
 });
 
 const initialState = {
-	todos: []
+	todos: [],
+	visibilityFilter: 'SHOW_ALL'
 };
 
 export default createStore(rootReducer, initialState,

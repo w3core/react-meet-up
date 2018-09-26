@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Todo from './Todo';
 
 const TodoList = ({ todos, todoToggle, todoDelete }) => (
-	<ul>
+	<div>
 		{todos.map(todo => (
 			<Todo key={todo.uid} todo={todo} todoToggle={todoToggle} todoDelete={todoDelete} />
 		))}
-	</ul>
+	</div>
 );
 
 TodoList.propTypes = {

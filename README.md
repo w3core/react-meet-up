@@ -7,10 +7,12 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 7: Deleting todos
+### Step 8: Visibility filter
 
-It is a nice feature to have and it is easy as hell to implement. As always we create a new action and add a new handler for its type to the reducer.
+Let's make a feature which'll allow user to browse all,completed, or active todo items. We'll call visibility filter.
 
-The rest is even simpler - pass down action to our `<Todo/>` component and show some fancy delete icon which would trigger this action.
+Althought we need to create new reducer and action creator to change our visibility filter, we need as well "filter" our todo items based on visibility filter value.
 
-Probably, we shouldn't spend an entire "step" on such "huge" feature. Let's move on
+To achvive this we can introduce new method which would take current filter value and our array of todo items and return us only those todo items which meet our current filter value.
+
+As soon as we have this implemented - our visibility filter feature is comlpeted!
