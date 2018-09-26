@@ -7,10 +7,10 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 6: Adding and toggling todo state
+### Step 7: Deleting todos
 
-So, obviously, we need to introduce a property which would be responsible for todo state (active/completed). I think `completed` boolean prop will do just fine.
+It is a nice feature to have and it is easy as hell to implement. As always we create a new action and add a new handler for its type to the reducer.
 
-Besides that - we need to create an action which would pass todo's uid to the reducer and create a specific handler for this action for the reducer.
+The rest is even simpler - pass down action to our `<Todo/>` component and show some fancy delete icon which would trigger this action.
 
-Since our todo item features begin to grow it is reasonable to introduce separate `<Todo/>` component which would be responsible for showing todo item text, status, and toggling status as well.
+Probably, we shouldn't spend an entire "step" on such "huge" feature. Let's move on

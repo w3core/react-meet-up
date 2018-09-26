@@ -1,4 +1,4 @@
-import { TODO_ADD, TODO_TOGGLE } from '../actions/todos';
+import { TODO_ADD, TODO_TOGGLE, TODO_DELETE } from '../actions/todos';
 
 export default function todos(state = [], { type, text, uid }) {
 	switch (type) {
@@ -28,6 +28,9 @@ export default function todos(state = [], { type, text, uid }) {
 
 				return todo;
 			});
+		case TODO_DELETE: {
+			return state.filter(todo => todo.uid !== uid);
+		}
 		default:
 			return state;
 	}
