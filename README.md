@@ -7,13 +7,10 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 5: Simple todo list
+### Step 6: Adding and toggling todo state
 
-Let's start to interate on something more interesting than a counter. Over a few next steps, we'll create a decent todo-list application.
-At this step, we'll create `todos()` reducer with a default state of an empty array.
+So, obviously, we need to introduce a property which would be responsible for todo state (active/completed). I think `completed` boolean prop will do just fine.
 
-Our todo at this step would be an object with `text` key which describes, ehm, the text of an item and `uid` generated at the time of creation of todo to help us distinguish and iterate over them.
+Besides that - we need to create an action which would pass todo's uid to the reducer and create a specific handler for this action for the reducer.
 
-We'll start with a single action called `todoAdd()` which takes only on one argument which would be the text of our todo.
-
-Finally, we'll create two simple components to iterate and show our "todo" items and text input which would give us ability to create new items
+Since our todo item features begin to grow it is reasonable to introduce separate `<Todo/>` component which would be responsible for showing todo item text, status, and toggling status as well.

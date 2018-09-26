@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TodoList = ({ todos }) => (
+import Todo from './Todo';
+
+const TodoList = ({ todos, todoToggle }) => (
 	<ul>
-		{todos.map(todo => (
-			<li key={todo.uid}>{todo.text}</li>
-		))}
+		{todos.map(todo => (<Todo key={todo.uid} todo={todo} todoToggle={todoToggle} />))}
 	</ul>
 );
 
 TodoList.propTypes = {
-	todos: PropTypes.arrayOf(PropTypes.object)
+	todos: PropTypes.arrayOf(PropTypes.object),
+	todoToggle: PropTypes.func
 };
 
 export default TodoList;
