@@ -7,8 +7,13 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 4: Arguments in action creators
+### Step 5: Simple todo list
 
-Almost everytime action creator depends on some data passed to it as an argument. To demonstrate this let's implement a feature of incrementing and decrementing our counter by some specified value.
+Let's start to interate on something more interesting than a counter. Over a few next steps, we'll create a decent todo-list application.
+At this step, we'll create `todos()` reducer with a default state of an empty array.
 
-And after this, we'll start with something more interesting than a simple counter.
+Our todo at this step would be an object with `text` key which describes, ehm, the text of an item and `uid` generated at the time of creation of todo to help us distinguish and iterate over them.
+
+We'll start with a single action called `todoAdd()` which takes only on one argument which would be the text of our todo.
+
+Finally, we'll create two simple components to iterate and show our "todo" items and text input which would give us ability to create new items

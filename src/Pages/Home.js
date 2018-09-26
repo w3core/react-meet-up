@@ -3,31 +3,29 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Counter from '../components/Counter';
+import TodoList from '../components/TodoList';
+import TodoInput from '../components/TodoInput';
 
-import { counterIncrement, counterDecrement, counterChangeBy } from '../actions/counter';
+import { todoAdd } from '../actions/todos';
 
-const Home = ({ value, increment, decrement, changeBy }) => (
+const Home = ({ todoAdd, todos }) => (
 	<div>
-		<Counter value={value} increment={increment} decrement={decrement} changeBy={changeBy} />
+		<TodoInput todoAdd={todoAdd} />
+		<TodoList todos={todos} />
 	</div>
 );
 
 Home.propTypes = {
-	value: PropTypes.number,
-	increment: PropTypes.func,
-	decrement: PropTypes.func,
-	changeBy: PropTypes.func
+	todos: PropTypes.arrayOf(PropTypes.object),
+	todoAdd: PropTypes.func
 };
 
 const mapStateToProps = state => ({
-	value: state.counter
+	todos: state.todos
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	increment: counterIncrement,
-	decrement: counterDecrement,
-	changeBy: counterChangeBy
+	todoAdd
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
