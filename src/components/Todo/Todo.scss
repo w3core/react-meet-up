@@ -1,0 +1,21 @@
+.Todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & * {
+        font-size: 24px;
+    }
+
+    button {
+        border: 0;
+        background: none;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    span {
+        flex: 1;
+    }
+}

@@ -7,10 +7,6 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 10: Showing remaining todo items, and clearing completed ones
+### Step 11: Styling.
 
-It would be nice to indicate how many items are not yet completed. We can utilize the same approach as in Step 9 - create a method which would pass down the number of items to our `<Information/>` component.
-
-Also, let's create a todo action which would allow us to remove items with completed status. To determine whether we need to show button to clear completed todo items we would also need to create a method which would tell us if there are any completed todo items at all.
-
-Having that done our todo-app feels way more UX friendly. That's good, isn't it?
+It is always more comfortable to look at UI which isn't terrible and smells like its still 2000 outside, right?

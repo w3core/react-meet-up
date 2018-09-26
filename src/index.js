@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import { rootId } from '../config';
 
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 
 render(
 	<Provider store={store}>

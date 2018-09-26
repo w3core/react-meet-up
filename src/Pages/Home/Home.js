@@ -3,13 +3,15 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import TodoList from '../components/TodoList';
-import TodoInput from '../components/TodoInput';
-import VisibilityFilter from '../components/VisibilityFilter';
-import Information from '../components/Information';
+import TodoList from '../../components/TodoList/TodoList';
+import TodoInput from '../../components/TodoInput/TodoInput';
+import VisibilityFilter from '../../components/VisibilityFilter/VisibilityFilter';
+import Information from '../../components/Information/Information';
 
-import { todoAdd, todoToggle, todoDelete, todoClearCompleted } from '../actions/todos';
-import { visibilityFilterSet } from '../actions/visibilityFilter';
+import { todoAdd, todoToggle, todoDelete, todoClearCompleted } from '../../actions/todos';
+import { visibilityFilterSet } from '../../actions/visibilityFilter';
+
+import './Home.scss';
 
 const Home = ({
 	todoAdd,
@@ -22,11 +24,13 @@ const Home = ({
 	todosLeft,
 	showClearCompleted
 }) => (
-	<div>
-		<TodoInput todoAdd={todoAdd} />
-		<TodoList todos={todos} todoToggle={todoToggle} todoDelete={todoDelete} />
-		<VisibilityFilter visibilityFilter={visibilityFilter} visibilityFilterSet={visibilityFilterSet} />
-		<Information todosLeft={todosLeft} todoClearCompleted={todoClearCompleted} showClearCompleted={showClearCompleted} />
+	<div className="HomeWrapper">
+		<div className="Home">
+			<TodoInput todoAdd={todoAdd} />
+			<TodoList todos={todos} todoToggle={todoToggle} todoDelete={todoDelete} />
+			<VisibilityFilter visibilityFilter={visibilityFilter} visibilityFilterSet={visibilityFilterSet} />
+			<Information todosLeft={todosLeft} todoClearCompleted={todoClearCompleted} showClearCompleted={showClearCompleted} />
+		</div>
 	</div>
 );
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Todo.scss';
+
 const Todo = ({ todo, todoToggle, todoDelete }) => (
-	<div>
+	<div className="Todo">
 		<button type="button" onClick={() => todoToggle(todo.uid)}>{todo.completed ? '✔️' : '⭕'}</button>
-		{todo.text}
+		<span>{todo.text}</span>
 		<button type="button" onClick={() => todoDelete(todo.uid)}>
 			<span role="img" aria-label="delete">🗑️</span>
 		</button>

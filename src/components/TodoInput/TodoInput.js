@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './TodoInput.scss';
+
 const TodoInput = ({ todoAdd }) => {
 	const handleEnterPress = (e) => {
 		if (e.charCode === 13) {
@@ -11,7 +13,7 @@ const TodoInput = ({ todoAdd }) => {
 	};
 
 	return (
-		<input type="text" onKeyPress={handleEnterPress} />
+		<input type="text" className="TodoInput" onKeyPress={handleEnterPress} placeholder="What needs to be done?" />
 	);
 };
 

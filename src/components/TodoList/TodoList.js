@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Todo from './Todo';
+import Todo from '../Todo/Todo';
 
 const TodoList = ({ todos, todoToggle, todoDelete }) => (
 	<div>
