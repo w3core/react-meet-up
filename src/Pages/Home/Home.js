@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import TodoList from '../../components/TodoList/TodoList';
 import TodoInput from '../../components/TodoInput/TodoInput';
@@ -23,19 +24,38 @@ const Home = ({
 	visibilityFilter,
 	todosLeft,
 	showClearCompleted
-}) => (
-	<div className="HomeWrapper">
-		<div className="Home">
-			<TodoInput todoAdd={todoAdd} />
-			<TodoList todos={todos} todoToggle={todoToggle} todoDelete={todoDelete} />
-			<VisibilityFilter visibilityFilter={visibilityFilter} visibilityFilterSet={visibilityFilterSet} />
-			<Information todosLeft={todosLeft} todoClearCompleted={todoClearCompleted} showClearCompleted={showClearCompleted} />
+}) => {
+	const todoListProps = {
+		todos,
+		todoToggle,
+		todoDelete
+	};
+
+	const visibilityFilterProps = {
+		visibilityFilter,
+		visibilityFilterSet
+	};
+
+	const informationProps = {
+		todosLeft,
+		todoClearCompleted,
+		showClearCompleted
+	};
+
+	return (
+		<div className="HomeWrapper">
+			<div className="Home">
+				<TodoInput todoAdd={todoAdd} />
+				<TodoList {...todoListProps} />
+				<VisibilityFilter {...visibilityFilterProps} />
+				<Information {...informationProps} />
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 Home.propTypes = {
-	todos: PropTypes.arrayOf(PropTypes.object),
+	todos: ImmutablePropTypes.list,
 	visibilityFilter: PropTypes.string,
 	todosLeft: PropTypes.number,
 	showClearCompleted: PropTypes.bool,
@@ -46,26 +66,26 @@ Home.propTypes = {
 	todoClearCompleted: PropTypes.func
 };
 
-const getVisibleTodos = (todos, visibilityFilter) => todos.filter(({ completed }) => {
+const getVisibleTodos = (todos, visibilityFilter) => todos.filter((todo) => {
 	switch (visibilityFilter) {
 		case 'SHOW_ACTIVE':
-			return !completed;
+			return !todo.get('completed');
 		case 'SHOW_COMPLETED':
-			return completed;
+			return todo.get('completed');
 		default:
 			return true;
 	}
 });
 
-const todosLeft = todos => todos.filter(({ completed }) => !completed).length;
+const todosLeft = todos => todos.filter(todo => !todo.get('completed')).size;
 
-const showClearCompleted = todos => todos.filter(({ completed }) => completed).length > 0;
+const showClearCompleted = todos => todos.filter(todo => todo.get('completed')).size > 0;
 
 const mapStateToProps = state => ({
-	todos: getVisibleTodos(state.todos, state.visibilityFilter),
-	visibilityFilter: state.visibilityFilter,
-	todosLeft: todosLeft(state.todos),
-	showClearCompleted: showClearCompleted(state.todos)
+	todos: getVisibleTodos(state.get('todos'), state.get('visibilityFilter')),
+	visibilityFilter: state.get('visibilityFilter'),
+	todosLeft: todosLeft(state.get('todos')),
+	showClearCompleted: showClearCompleted(state.get('todos'))
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

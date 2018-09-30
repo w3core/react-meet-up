@@ -1,4 +1,6 @@
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { Map, List, fromJS } from 'immutable';
+import { combineReducers } from 'redux-immutable';
 
 import localStorageMiddleware from '../middleware/localStorageMiddleware';
 
@@ -11,20 +13,20 @@ const rootReducer = combineReducers({
 });
 
 const initialState = {
-	todos: [],
+	todos: List(),
 	visibilityFilter: 'SHOW_ALL'
 };
 
 
 const getInitialState = () => {
 	if (localStorage.getItem('todos')) {
-		initialState.todos = JSON.parse(localStorage.getItem('todos'));
+		initialState.todos = fromJS(JSON.parse(localStorage.getItem('todos'))).toList().map(todo => Map(todo));
 	}
 	if (localStorage.getItem('visibilityFilter')) {
 		initialState.visibilityFilter = JSON.parse(localStorage.getItem('visibilityFilter'));
 	}
 
-	return initialState;
+	return Map(initialState);
 };
 
 const middleware = applyMiddleware(localStorageMiddleware);

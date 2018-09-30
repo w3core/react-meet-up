@@ -8,12 +8,12 @@ export default ({ getState }) => next => (action) => {
 		case TODO_TOGGLE:
 		case TODO_DELETE:
 		case TODO_CLEAR_COMPLETED:
-			localStorage.setItem('todos', JSON.stringify(getState().todos));
+			localStorage.setItem('todos', JSON.stringify(getState().get('todos')));
 
 			return result;
 
 		case 'SET_VISIBILITY_FILTER':
-			localStorage.setItem('visibilityFilter', JSON.stringify(getState().visibilityFilter));
+			localStorage.setItem('visibilityFilter', JSON.stringify(getState().get('visibilityFilter')));
 
 			return result;
 		default:
