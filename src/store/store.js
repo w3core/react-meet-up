@@ -1,4 +1,6 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+
+import localStorageMiddleware from '../middleware/localStorageMiddleware';
 
 import todosReducer from '../reducers/todos';
 import visibilityFilterReducer from '../reducers/visibilityFilter';
@@ -13,5 +15,21 @@ const initialState = {
 	visibilityFilter: 'SHOW_ALL'
 };
 
-export default createStore(rootReducer, initialState,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const getInitialState = () => {
+	if (localStorage.getItem('todos')) {
+		initialState.todos = JSON.parse(localStorage.getItem('todos'));
+	}
+	if (localStorage.getItem('visibilityFilter')) {
+		initialState.visibilityFilter = JSON.parse(localStorage.getItem('visibilityFilter'));
+	}
+
+	return initialState;
+};
+
+const middleware = applyMiddleware(localStorageMiddleware);
+
+export default createStore(rootReducer, getInitialState(), compose(
+	middleware,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+));

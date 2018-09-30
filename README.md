@@ -7,6 +7,9 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-### Step 11: Styling.
+### Step 12: Middlewares.
 
-It is always more comfortable to look at UI which isn't terrible and smells like its still 2000 outside, right?
+Yet, our app is capable of many nice things, it feels so frustrated when we hit reload button and our todos are gone :c. Lets fix that!
+
+Well, the most obvious thinh to help us - `LocalStorage`. We can have some part of it store our app state, which would be updated when we want it.
+And, obviously, our local storage middleware would be responsible for updating it.
