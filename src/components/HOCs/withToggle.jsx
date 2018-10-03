@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Babel Defect: Move propTypes definition here, because babel sets it as read-only inside 'function withToggle'.
+const propTypes = {
+  toggled: PropTypes.bool,
+};
+
 function withToggle(WrappedComponent) {
   const displayName = `WithToggle(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
-
-  const propTypes = {
-    toggled: PropTypes.bool,
-  };
 
   const defaultProps = {
     toggled: false,

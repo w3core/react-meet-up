@@ -8,8 +8,6 @@ function withError(WrappedComponent, handleError) {
       handleError(error, info);
     }
 
-    componentDidMount() {}
-
     render() {
       return <WrappedComponent {...this.props} />;
     }

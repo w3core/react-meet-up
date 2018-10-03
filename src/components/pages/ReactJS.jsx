@@ -5,14 +5,15 @@ const displayName = 'ReactJS';
 
 function ReactJS() {
   return (
-    <div>
+    // No extra div wrapper. With React.Fragment its children are rendered as is directly into the parent.
+    <React.Fragment>
       <h1>ReactJS</h1>
       <Button>DEFAULT</Button>
       <Button accent>ACCENT</Button>
       <ToggleButton>DEFAULT TOGGLE</ToggleButton>
       <ToggleButton accent>ACCENT TOGGLE</ToggleButton>
       <BuggyControl />
-    </div>
+    </React.Fragment>
   );
 }
 
