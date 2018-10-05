@@ -64,7 +64,10 @@
   },
   "lint-staged": {
     "*.{js,json,jsx}": [
-      "prettier-eslint --print-width 120 --write",
+      "prettier --print-width 120 --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
       "git add"
     ]
   }
