@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactJS } from 'components/pages';
-import ThemeContext, * as themes from './themes';
+import { Provider } from 'react-redux';
+import { Redux } from 'components/pages';
+import store from 'store';
+import ThemeContext, * as themes from 'themes';
 
 const displayName = 'App';
 
@@ -17,10 +19,12 @@ const defaultProps = {
 
 export default function App({ title, theme }) {
   return (
-    <ThemeContext.Provider value={themes[theme]}>
-      <h1>{title}</h1>
-      <ReactJS />
-    </ThemeContext.Provider>
+    <Provider store={store}>
+      <ThemeContext.Provider value={themes[theme]}>
+        <h1>{title}</h1>
+        <Redux />
+      </ThemeContext.Provider>
+    </Provider>
   );
 }
 

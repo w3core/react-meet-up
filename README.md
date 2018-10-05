@@ -2,16 +2,13 @@
 
 Training projects for ReactJS
 
-## Chapter-2
+## Chapter-4
 
-ReactJS
+Why hipsters recompose everything. Recompose, reselect
 
-Video course: https://www.youtube.com/watch?v=sPXLbPCq8GA
+Video course: TBD
 
 ## References
 
-ReactJS - https://reactjs.org/docs/getting-started.html
-React Patterns - https://reactpatterns.com
-Best Practices - https://github.com/MicheleBertoli/react-design-patterns-and-best-practices
-Anti Patterns - https://github.com/vasanthk/react-bits/tree/master/anti-patterns
-Yet one: Atomic Design - http://bradfrost.com/blog/post/atomic-web-design
+Recompose: https://github.com/acdlite/recompose/blob/master/docs/API.md
+Reselect: https://github.com/reduxjs/reselect
