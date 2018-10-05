@@ -15,7 +15,9 @@ function Product({ name, handleRemove }) {
       <div>
         {name}
         {' - '}
-        <Button onClick={handleRemove} value="removeProduct">Remove</Button>
+        <Button onClick={handleRemove} value="removeProduct">
+          Remove
+        </Button>
       </div>
     )
   );
