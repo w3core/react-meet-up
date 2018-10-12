@@ -11,4 +11,5 @@ Video course: TBD
 ## References
 
 Recompose: https://github.com/acdlite/recompose/blob/master/docs/API.md
+
 Reselect: https://github.com/reduxjs/reselect
