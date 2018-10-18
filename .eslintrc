@@ -9,9 +9,11 @@
     "no-console": "error",
     "max-len": ["error", { "code": 120, "tabWidth": 2 }],
     "react/display-name": ["error", { "ignoreTranspilerName": true }],
-    "react/prefer-stateless-function": "error"
+    "react/prefer-stateless-function": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".test.js", ".jsx"] }]
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   }
 }

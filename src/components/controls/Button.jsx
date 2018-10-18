@@ -16,7 +16,7 @@ const defaultProps = {
   children: '',
 };
 
-function Button({ onClick, style, children }) {
+export function ButtonBase({ onClick, style, children }) {
   return (
     <button type="button" onClick={onClick} style={style}>
       {children}
@@ -24,10 +24,12 @@ function Button({ onClick, style, children }) {
   );
 }
 
-Button.displayName = displayName;
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+ButtonBase.displayName = displayName;
+ButtonBase.propTypes = propTypes;
+ButtonBase.defaultProps = defaultProps;
 
-export default withStyle(Button, (theme, { accent }) => ({
+export const styleCreator = (theme, { accent }) => ({
   backgroundColor: accent ? theme.colorAccent : theme.colorDefault,
-}));
+});
+
+export default withStyle(ButtonBase, styleCreator);
