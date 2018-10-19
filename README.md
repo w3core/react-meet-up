@@ -2,11 +2,9 @@
 
 Training projects for ReactJS
 
-## Chapter-2
+## Chapter-2. ReactJS
 
-ReactJS
-
-Video course: https://www.youtube.com/watch?v=sPXLbPCq8GA
+**Video:** https://www.youtube.com/watch?v=sPXLbPCq8GA
 
 ## References
 
