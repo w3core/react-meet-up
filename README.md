@@ -2,12 +2,12 @@
 
 Training projects for ReactJS
 
-## Chapter-4. Why hipsters recompose everything. Recompose, reselect
+## Chapter-7. Unit tests with Jest
 
-**Video:** https://www.youtube.com/watch?v=z7--uWIJczY
+**Video:** TBD
 
 ## References
 
-Recompose - https://github.com/acdlite/recompose/blob/master/docs/API.md
+Jest - https://jestjs.io
 
-Reselect - https://github.com/reduxjs/reselect
+Enzyme - http://airbnb.io/enzyme
