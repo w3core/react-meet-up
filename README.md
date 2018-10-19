@@ -2,11 +2,9 @@
 
 Training projects for ReactJS
 
-## Chapter-1
+## Chapter-1. How to setup JS project in 2018
 
-How to setup JS project in 2018
-
-Video: https://www.youtube.com/watch?v=4k3q8y-Khw4
+**Video:** https://www.youtube.com/watch?v=4k3q8y-Khw4
 
 ### VSCode
 
