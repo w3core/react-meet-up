@@ -7,6 +7,8 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
+**Video:** TBD
+
 ### Step 12: Immutable.
 
 Without further ado - let's enhance our redux flow with introducing `Immutable.js` library.
