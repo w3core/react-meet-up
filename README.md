@@ -4,7 +4,7 @@ Training projects for ReactJS
 
 ## Chapter-7. Unit tests with Jest
 
-**Video:** TBD
+**Video:** https://www.youtube.com/watch?v=HI_9MoKJecs
 
 ## References
 
