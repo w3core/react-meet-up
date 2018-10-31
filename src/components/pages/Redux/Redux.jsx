@@ -48,11 +48,15 @@ function Redux({
         ))}
       </div>
       <div>
-        <input type="text" value={name} onChange={changeName} />
-        <Button onClick={handleAddProduct}>Add Product</Button>
+        <input data-name="new-product-name" type="text" value={name} onChange={changeName} />
+        <Button name="add-product" onClick={handleAddProduct}>
+          Add Product
+        </Button>
       </div>
       <div>
-        <Button onClick={handleFetchProducts}>Fetch Products</Button>
+        <Button name="fetch-products" onClick={handleFetchProducts}>
+          Fetch Products
+        </Button>
       </div>
     </main>
   );

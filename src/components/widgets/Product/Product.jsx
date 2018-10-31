@@ -12,7 +12,7 @@ const propTypes = {
 function Product({ name, handleRemove }) {
   return (
     name && (
-      <div>
+      <div data-name={name}>
         {name}
         {' - '}
         <Button onClick={handleRemove} value="removeProduct">

@@ -33,7 +33,7 @@ module.exports = {
   resolve: {
     // Find modules in node_modules or 'src' folders.
     // We can use import statements relatively to 'src' folder avoiding import paths like '../../../<component>'.
-    modules: ['node_modules', './src'],
+    modules: ['node_modules', './src', './test'],
 
     // In the import statements resolve specified extensions automatically,
     // so we do not need to imports like: import Button from 'components/Button.jsx'

@@ -2,12 +2,10 @@
 
 Training projects for ReactJS
 
-## Chapter-7. Unit tests with Jest
+## Chapter-8. Automation with Webdriver.io
 
-**Video:** https://www.youtube.com/watch?v=HI_9MoKJecs
+**Video:** TBD
 
 ## References
 
-Jest - https://jestjs.io
-
-Enzyme - http://airbnb.io/enzyme
+Webdriver.io - http://webdriver.io

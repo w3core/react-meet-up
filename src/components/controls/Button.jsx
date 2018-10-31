@@ -8,17 +8,21 @@ const propTypes = {
   onClick: PropTypes.func,
   style: PropTypes.objectOf(PropTypes.string),
   children: PropTypes.string,
+  name: PropTypes.string,
 };
 
 const defaultProps = {
   onClick: undefined,
   style: {},
   children: '',
+  name: '',
 };
 
-export function ButtonBase({ onClick, style, children }) {
+export function ButtonBase({
+  name, onClick, style, children,
+}) {
   return (
-    <button type="button" onClick={onClick} style={style}>
+    <button data-name={name} type="button" onClick={onClick} style={style}>
       {children}
     </button>
   );
