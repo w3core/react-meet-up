@@ -7,7 +7,7 @@ Bring good mood with you!
 
 ## Chapter 3: Redux store with ImmutableJS
 
-**Video:** TBD
+**Video:** https://youtu.be/IqoTZHwFsx0
 
 ### Step 12: Immutable.
 
