@@ -3,7 +3,6 @@ import Redux from 'page-objects/Redux';
 describe('Given the Redux page is opened', () => {
   beforeEach(() => {
     Redux.open();
-    // browser.waitForExist(Redux.buttonAddProduct);
   });
 
   describe('when a product name is entered', () => {
