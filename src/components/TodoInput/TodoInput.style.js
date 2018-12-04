@@ -1,4 +1,6 @@
-.TodoInput {
+import styled from 'styled-components';
+
+export default styled.input`
     height: 40px;
     border: 0;
     box-shadow: 1px 1px 4px rgba(0,0,0,.2);
@@ -8,4 +10,4 @@
     height: 40px;
     outline: 0;
     margin-bottom: 20px;
-}
+`;

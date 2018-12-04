@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './VisibilityFilter.scss';
+import VisibilityFilterWrapper, { Button } from './VisibilityFilter.style';
 
 const VisibilityFilter = ({ visibilityFilter, visibilityFilterSet }) => {
 	const filters = ['SHOW_ALL', 'SHOW_ACTIVE', 'SHOW_COMPLETED'];
@@ -22,17 +22,17 @@ const VisibilityFilter = ({ visibilityFilter, visibilityFilterSet }) => {
 	};
 
 	return (
-		<div className="VisibilityFilter">
+		<VisibilityFilterWrapper>
 			{filters.map((presetFilter) => {
 				const isFilterActive = isActive(visibilityFilter, presetFilter);
 
 				return (
-					<button key={presetFilter} type="button" onClick={setFilter(presetFilter)} className={isFilterActive ? '-active' : ''}>
+					<Button key={presetFilter} type="button" onClick={setFilter(presetFilter)} active={isFilterActive}>
 						{userFriendlyFilterNames[presetFilter]}
-					</button>
+					</Button>
 				);
 			})}
-		</div>
+		</VisibilityFilterWrapper>
 	);
 };
 

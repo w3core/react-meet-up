@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Information.scss';
+import InformationWrapper, { Button } from './Information.style';
 
 const Information = ({ todosLeft, todoClearCompleted, showClearCompleted }) => (
-	<div className="Information">
+	<InformationWrapper>
 		<span>{todosLeft} items left</span>
-		{showClearCompleted && <button type="button" onClick={todoClearCompleted}>Clear completed</button>}
-	</div>
+		{showClearCompleted && <Button type="button" onClick={todoClearCompleted}>Clear completed</Button>}
+	</InformationWrapper>
 );
 
 Information.propTypes = {

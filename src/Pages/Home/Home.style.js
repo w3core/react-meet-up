@@ -1,8 +1,10 @@
-.HomeWrapper {
-    padding: 40px 20px;
-}
+import styled from 'styled-components';
 
-.Home {
+export default styled.div`
+    padding: 40px 20px;
+`;
+
+export const HomeHolder = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     background: #fafafa;
     box-shadow: 0px 0px 4px 0 rgba(0,0,0,0.25);
@@ -10,4 +12,4 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-}
+`;

@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
-import './Todo.scss';
+import TodoWrapper, { Button, TodoText, TodoStatusFlair } from './Todo.style';
 
 const Todo = ({ todo, todoToggle, todoDelete }) => (
-	<div className="Todo">
-		<button type="button" onClick={() => todoToggle(todo.get('uid'))}>{todo.get('completed') ? '✔️' : '⭕'}</button>
-		<span>{todo.get('text')}</span>
-		<button type="button" onClick={() => todoDelete(todo.get('uid'))}>
+	<TodoWrapper>
+		<Button type="button" onClick={() => todoToggle(todo.get('uid'))}>
+			<TodoStatusFlair completed={todo.get('completed')} />
+		</Button>
+		<TodoText>{todo.get('text')}</TodoText>
+		<Button type="button" onClick={() => todoDelete(todo.get('uid'))}>
 			<span role="img" aria-label="delete">🗑️</span>
-		</button>
-	</div>
+		</Button>
+	</TodoWrapper>
 );
 
 Todo.propTypes = {

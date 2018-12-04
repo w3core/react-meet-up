@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './TodoInput.scss';
+import Input from './TodoInput.style';
 
 const TodoInput = ({ todoAdd }) => {
 	const handleEnterPress = (e) => {
@@ -13,7 +13,7 @@ const TodoInput = ({ todoAdd }) => {
 	};
 
 	return (
-		<input type="text" className="TodoInput" onKeyPress={handleEnterPress} placeholder="What needs to be done?" />
+		<Input type="text" onKeyPress={handleEnterPress} placeholder="What needs to be done?" />
 	);
 };
 

@@ -12,7 +12,7 @@ import Information from '../../components/Information/Information';
 import { todoAdd, todoToggle, todoDelete, todoClearCompleted } from '../../actions/todos';
 import { visibilityFilterSet } from '../../actions/visibilityFilter';
 
-import './Home.scss';
+import HomeWrapper, { HomeHolder } from './Home.style';
 
 const Home = ({
 	todoAdd,
@@ -43,14 +43,14 @@ const Home = ({
 	};
 
 	return (
-		<div className="HomeWrapper">
-			<div className="Home">
+		<HomeWrapper>
+			<HomeHolder>
 				<TodoInput todoAdd={todoAdd} />
 				<TodoList {...todoListProps} />
 				<VisibilityFilter {...visibilityFilterProps} />
 				<Information {...informationProps} />
-			</div>
-		</div>
+			</HomeHolder>
+		</HomeWrapper>
 	);
 };
 
