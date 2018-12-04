@@ -17,15 +17,10 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "immutable": "3.8.2",
     "prop-types": "15.6.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",
-    "react-redux": "5.0.7",
-    "recompose": "0.30.0",
-    "redux": "4.0.0",
-    "redux-api-middleware": "^2.3.0",
-    "redux-immutable": "4.0.0"
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
@@ -51,6 +46,6 @@
     "style-loader": "0.23.0",
     "webpack": "4.16.5",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.5"
+    "webpack-dev-server": "^3.1.10"
   }
 }

@@ -1,21 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import { rootId } from '../config';
-import store from './store';
-import Home from './Pages/Home';
 
-const reduxDevTools = (
-	typeof window !== 'undefined'
-	&& window.__REDUX_DEVTOOLS_EXTENSION__
-	&& window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-const $store = store(reduxDevTools);
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+
+import './theme/theme.scss';
 
 render(
-	<Provider store={$store}>
-		<Home />
-	</Provider>,
+	<Router>
+		<div>
+			<Link to="/">Home</Link> <Link to="/about/">About</Link><br /><br />
+
+			<Route path="/" exact component={Home} />
+			<Route path="/about" component={About} />
+		</div>
+	</Router>,
 	document.getElementById(rootId),
 );
