@@ -1,34 +1,37 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { Map, List, fromJS } from 'immutable';
 import { combineReducers } from 'redux-immutable';
-import { Map } from 'immutable';
-import { apiMiddleware } from 'redux-api-middleware';
 
-import defaultState from './defaultState';
+import localStorageMiddleware from '../middleware/localStorageMiddleware';
 
-import {
-	userReducer,
-	categoriesReducer,
-	goodsReducer
-} from '../ducks';
+import todosReducer from '../reducers/todos';
+import visibilityFilterReducer from '../reducers/visibilityFilter';
 
 const rootReducer = combineReducers({
-	user: userReducer,
-	categories: categoriesReducer,
-	goods: goodsReducer
+	todos: todosReducer,
+	visibilityFilter: visibilityFilterReducer
 });
 
-const getInitialStore = () => {
-	const state = Map(defaultState);
-
-	return state;
+const initialState = {
+	todos: List(),
+	visibilityFilter: 'SHOW_ALL'
 };
 
-const middleware = applyMiddleware(apiMiddleware /* ,... */);
 
-export default (additionalMiddleware) => {
-	if (additionalMiddleware) {
-		return createStore(rootReducer, getInitialStore(), compose(middleware, additionalMiddleware));
+const getInitialState = () => {
+	if (localStorage.getItem('todos')) {
+		initialState.todos = fromJS(JSON.parse(localStorage.getItem('todos'))).toList().map(todo => Map(todo));
+	}
+	if (localStorage.getItem('visibilityFilter')) {
+		initialState.visibilityFilter = JSON.parse(localStorage.getItem('visibilityFilter'));
 	}
 
-	return createStore(rootReducer, getInitialStore(), middleware);
+	return Map(initialState);
 };
+
+const middleware = applyMiddleware(localStorageMiddleware);
+
+export default createStore(rootReducer, getInitialState(), compose(
+	middleware,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+));
