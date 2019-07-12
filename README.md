@@ -22,3 +22,7 @@ Bring good mood with you!
 7. [Unit tests with Jest](https://github.com/w3core/react-meet-up/tree/Chapter-7)
 
 8. Automation with Webdriver.io
+
+# Video
+
+[Video by topics on YouTube channel](https://www.youtube.com/playlist?list=PLGuURCjQ911JrCVi4bTfEX44DrjvwuK47)
